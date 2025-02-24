@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
@@ -6,35 +7,29 @@
 
 body {
   margin: 0;
-  font-family: "Figtree", Helvetica, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
   background-color: #16161a;
-  position: absolute;
-  animation-name: fade-in-top;
+  animation-name: fade-in;
   animation-duration: 2s;
   animation-iteration-count: 1;
-  animation-timing-function: linear;
+  animation-timing-function: ease-in;
 }
 
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 15%;
-  padding: 2.5%;
   font-size: 1.5rem;
   color: #2cb67d;
   text-shadow: 2px 2px #7f5af0;
   font-style: italic;
   font-weight: 900;
   border: 0px solid white;
+  padding-left: 2%;
 }
 
 nav {
   display: flex;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   padding: 2%;
   justify-content: center;
@@ -66,7 +61,6 @@ nav button:hover {
 main {
   display: flex;
   overflow: hidden;
-  height: 100vh;
   width: 100vw;
   border: 0px solid white;
   align-items: center;
@@ -78,7 +72,6 @@ article {
   justify-content: center;
   align-items: center;
   border: 0px solid white;
-  margin: 0;
   min-width: 100%;
 }
 
@@ -86,6 +79,7 @@ article img {
   grid-area: "pic";
   border-radius: 25px;
   width: 20%;
+  height: auto;
   margin: 2%;
   border-radius: 125px 125px 100px 100px;
   border: 0px solid black;
@@ -114,15 +108,10 @@ article p {
 }
 
 aside {
-  position: absolute;
-  top: 0;
-  right: 0;
   padding: 2.5%;
-  width: 25vw;
-  height: 15%;
   display: flex;
   justify-content: flex-end;
-  border: 0px solid white;
+  border: px solid white;
 }
 aside img {
   border: 0px solid #2cb67d;
@@ -142,7 +131,8 @@ aside img:hover {
   box-shadow: 0px 0px 15px #7f5af0;
 }
 footer {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -150,6 +140,9 @@ footer {
   padding: 2%;
   font-size: 0.8rem;
   line-height: 0.5rem;
+}
+footer h1 {
+  font-size: 1rem;
 }
 footer p {
   color: #94a1b2;
@@ -172,27 +165,29 @@ footer p {
   }
 }
 
-@keyframes fade-in-top {
+@keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
   }
-  35% {
-    transform: translateY(0px);
-  }
+
   100% {
     opacity: 100;
   }
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    font-size: 1.2rem;
-    height: 10%;
-    border: 1px solid white;
+@media screen and(max-width: 1024) {
+  main {
+    margin: 5% 2% 5% 2%;
   }
+}
+
+@media screen and (max-width: 768px) {
+  article {
+    margin: 2% 0 2% 0;
+  }
+
   article img {
-    width: 35%;
+    width: 30%;
   }
   article h2 {
     font-size: 1.2rem;
@@ -211,16 +206,47 @@ footer p {
     width: 25px;
     height: 25px;
   }
+  footer {
+    position: static;
+    padding: 2%;
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
   header {
     font-size: 0.8rem;
   }
+  main {
+    padding: 5%;
+  }
+  #textHolder {
+    padding: 2%;
+    max-width: 60%;
+  }
+  aside img {
+    width: 30px;
+  }
+  article {
+    flex-direction: column;
+  }
+  article img {
+    width: 50%;
+    margin: 2%;
+  }
   article h2 {
     font-size: 0.8rem;
   }
   article p {
     font-size: 0.7rem;
+  }
+  footer {
+    position: fixed;
+  }
+  footer h2 {
+    font-size: 1rem;
+  }
+  footer p {
+    font-size: 0.8rem;
   }
 }

@@ -43,20 +43,6 @@ window.addEventListener("wheel", function (scrollcount) {
       buttThree.classList.replace("buttonOn", "buttonOff");
       buttFour.classList.replace("buttonOn", "buttonOff");
       break;
-
-    case 2:
-      buttThree.classList.replace("buttonOff", "buttonOn");
-      buttOne.classList.replace("buttonOn", "buttonOff");
-      buttTwo.classList.replace("buttonOn", "buttonOff");
-      buttFour.classList.replace("buttonOn", "buttonOff");
-      break;
-
-    case 3:
-      buttFour.classList.replace("buttonOff", "buttonOn");
-      buttOne.classList.replace("buttonOn", "buttonOff");
-      buttTwo.classList.replace("buttonOn", "buttonOff");
-      buttThree.classList.replace("buttonOn", "buttonOff");
-      break;
   }
 
   console.log(scrollIndex);
@@ -70,8 +56,6 @@ buttOne.addEventListener("click", function () {
 
   buttOne.classList.replace("buttonOff", "buttonOn");
   buttTwo.classList.replace("buttonOn", "buttonOff");
-  buttThree.classList.replace("buttonOn", "buttonOff");
-  buttFour.classList.replace("buttonOn", "buttonOff");
 });
 
 buttTwo.addEventListener("click", function () {
@@ -81,28 +65,4 @@ buttTwo.addEventListener("click", function () {
 
   buttTwo.classList.replace("buttonOff", "buttonOn");
   buttOne.classList.replace("buttonOn", "buttonOff");
-  buttThree.classList.replace("buttonOn", "buttonOff");
-  buttFour.classList.replace("buttonOn", "buttonOff");
-});
-
-buttThree.addEventListener("click", function () {
-  index = 2;
-
-  carousel.scrollLeft = scrollLength * index;
-
-  buttThree.classList.replace("buttonOff", "buttonOn");
-  buttOne.classList.replace("buttonOn", "buttonOff");
-  buttTwo.classList.replace("buttonOn", "buttonOff");
-  buttFour.classList.replace("buttonOn", "buttonOff");
-});
-
-buttFour.addEventListener("click", function () {
-  index = 3;
-
-  carousel.scrollLeft = scrollLength * index;
-
-  buttFour.classList.replace("buttonOff", "buttonOn");
-  buttOne.classList.replace("buttonOn", "buttonOff");
-  buttTwo.classList.replace("buttonOn", "buttonOff");
-  buttThree.classList.replace("buttonOn", "buttonOff");
 });

@@ -10,7 +10,7 @@ body {
   font-family: "Lato", Helvetica, sans-serif;
   background-color: #16161a;
   animation-name: fade-in;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
 }
@@ -22,10 +22,9 @@ header {
   font-size: 1.5rem;
   color: #2cb67d;
   text-shadow: 2px 2px #7f5af0;
-  font-style: italic;
   font-weight: 900;
   border: 0px solid white;
-  padding-left: 2%;
+  padding: 0 2% 0 2%;
 }
 
 nav {
@@ -95,6 +94,15 @@ article img {
   max-width: 40%;
   margin-left: 2.5%;
 }
+#textHolder ul {
+  list-style: none;
+  padding-left: 0%;
+  color: white;
+}
+#textHolder a {
+  color: #94a1b2;
+  line-height: 1.3rem;
+}
 
 article h2 {
   font-size: 2rem;
@@ -108,10 +116,12 @@ article p {
 }
 
 aside {
-  padding: 2.5%;
   display: flex;
-  justify-content: flex-end;
-  border: px solid white;
+  width: 15%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid white;
 }
 aside img {
   border: 0px solid #2cb67d;
@@ -123,8 +133,7 @@ aside img {
   cursor: pointer;
 }
 aside a {
-  padding: 2.5%;
-  margin-left: 10%;
+  margin: 0 15% 0 15%;
 }
 aside img:hover {
   scale: 1.4;
@@ -137,7 +146,7 @@ footer {
   bottom: 0;
   right: 0;
   color: #fffffe;
-  padding: 2%;
+  padding: 3%;
   font-size: 0.8rem;
   line-height: 0.5rem;
 }
@@ -192,12 +201,13 @@ footer p {
   article h2 {
     font-size: 1.2rem;
   }
+  #textHolder a {
+    font-size: 1.2rem;
+  }
   article p {
     font-size: 0.9rem;
   }
-  aside {
-    height: 10%;
-  }
+
   aside img {
     width: 40px;
   }
@@ -217,12 +227,23 @@ footer p {
   header {
     font-size: 0.8rem;
   }
+  nav {
+    margin: 1%;
+  }
   main {
     padding: 5%;
   }
   #textHolder {
+    margin-top: 2%;
     padding: 2%;
     max-width: 60%;
+  }
+  #textHolder a {
+    font-size: 0.7rem;
+  }
+  aside {
+    width: 30%;
+    padding: 0 8% 0 8%;
   }
   aside img {
     width: 30px;
